@@ -1,0 +1,158 @@
+/**
+ * FitHub Design Tokens
+ * 全局视觉规范的唯一来源。必须在 element-plus/dist/index.css 之后引入，
+ * 才能覆盖 Element Plus 的主题变量。
+ */
+:root {
+  /* ── 品牌色 ── */
+  --fth-primary: #f97316;          /* 主色·运动橙 */
+  --fth-primary-hover: #ea580c;    /* hover / 按下 */
+  --fth-primary-soft: #ffedd5;     /* 浅橙底（激活项 / tag） */
+  --fth-primary-softer: #fff7ed;   /* 更浅（卡片强调） */
+  --fth-success: #16a34a;          /* 打卡完成 / 成功辅助 */
+  --fth-success-soft: #dcfce7;
+  --fth-warning: #f59e0b;
+  --fth-warning-soft: #fef3c7;
+  --fth-danger: #ef4444;
+  --fth-danger-soft: #fee2e2;
+  --fth-info: #6b7280;
+  --fth-info-soft: #e5e7eb;
+
+  /* ── 中性色 ── */
+  --fth-text-primary: #111827;
+  --fth-text-secondary: #6b7280;
+  --fth-text-tertiary: #9ca3af;
+  --fth-bg-page: #f8fafc;
+  --fth-bg-card: #ffffff;
+  --fth-bg-muted: #f3f4f6;
+  --fth-border: #e5e7eb;
+  --fth-border-soft: #f3f4f6;
+
+  /* ── 侧边栏（深色） ── */
+  --fth-sidebar-bg: #111827;
+  --fth-sidebar-text: #9ca3af;
+  --fth-sidebar-text-active: #ffffff;
+  --fth-sidebar-hover: rgba(255, 255, 255, 0.06);
+  --fth-sidebar-active-bg: rgba(249, 115, 22, 0.16);
+  --fth-sidebar-active-text: #fb923c;
+  --fth-sidebar-width: 232px;
+  --fth-sidebar-width-collapsed: 64px;
+
+  /* ── 圆角 ── */
+  --fth-radius-sm: 6px;
+  --fth-radius: 8px;
+  --fth-radius-md: 10px;
+  --fth-radius-lg: 12px;
+  --fth-radius-full: 999px;
+
+  /* ── 阴影 ── */
+  --fth-shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --fth-shadow: 0 1px 3px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+  --fth-shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08);
+  --fth-shadow-lg: 0 10px 28px rgba(16, 24, 40, 0.1);
+
+  /* ── 间距刻度 ── */
+  --fth-space-1: 4px;
+  --fth-space-2: 8px;
+  --fth-space-3: 12px;
+  --fth-space-4: 16px;
+  --fth-space-5: 24px;
+  --fth-space-6: 32px;
+  --fth-space-8: 48px;
+
+  /* ── 字号 ── */
+  --fth-text-xs: 12px;
+  --fth-text-sm: 13px;
+  --fth-text-base: 14px;
+  --fth-text-lg: 16px;
+  --fth-text-xl: 18px;
+  --fth-text-2xl: 20px;
+  --fth-text-3xl: 24px;
+  --fth-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+
+  /* ── 图表色板（克制） ── */
+  --fth-chart-primary: #f97316;
+  --fth-chart-blue: #3b82f6;
+  --fth-chart-purple: #8b5cf6;
+  --fth-chart-amber: #f59e0b;
+  --fth-chart-green: #16a34a;
+  --fth-chart-red: #ef4444;
+
+  /* ── Element Plus 主题覆盖 ── */
+  --el-color-primary: #f97316;
+  --el-color-primary-dark-2: #ea580c;
+  --el-color-primary-light-3: #fb8a43;
+  --el-color-primary-light-5: #fca76b;
+  --el-color-primary-light-7: #fdc9a6;
+  --el-color-primary-light-8: #fedcc7;
+  --el-color-primary-light-9: #feeee6;
+
+  --el-color-success: #16a34a;
+  --el-color-success-light-3: #45b56d;
+  --el-color-success-light-5: #74cb92;
+  --el-color-success-light-7: #a2dfb8;
+  --el-color-success-light-8: #bce9cc;
+  --el-color-success-light-9: #e6f5eb;
+  --el-color-success-dark-2: #11803b;
+
+  --el-color-warning: #f59e0b;
+  --el-color-warning-light-3: #f7b64d;
+  --el-color-warning-light-5: #f9cd80;
+  --el-color-warning-light-7: #fbe4b3;
+  --el-color-warning-light-8: #fcefc9;
+  --el-color-warning-light-9: #fef8ec;
+  --el-color-warning-dark-2: #d97706;
+
+  --el-color-danger: #ef4444;
+  --el-color-danger-light-3: #f46d6d;
+  --el-color-danger-light-5: #f79393;
+  --el-color-danger-light-7: #fabdbd;
+  --el-color-danger-light-8: #fcd0d0;
+  --el-color-danger-light-9: #feecec;
+  --el-color-danger-dark-2: #dc2626;
+
+  --el-color-error: #ef4444;
+  --el-color-info: #6b7280;
+  --el-color-info-light-3: #8b929c;
+  --el-color-info-light-5: #aab0b8;
+  --el-color-info-light-7: #c9cdd3;
+  --el-color-info-light-8: #d8dbe0;
+  --el-color-info-light-9: #f4f5f7;
+  --el-color-info-dark-2: #565e68;
+
+  --el-border-radius-base: 8px;
+  --el-border-radius-small: 6px;
+  --el-border-radius-round: 999px;
+
+  --el-text-color-primary: #111827;
+  --el-text-color-regular: #374151;
+  --el-text-color-secondary: #6b7280;
+  --el-text-color-placeholder: #9ca3af;
+  --el-text-color-disabled: #c0c4cc;
+
+  --el-border-color: #e5e7eb;
+  --el-border-color-light: #e5e7eb;
+  --el-border-color-lighter: #f3f4f6;
+  --el-border-color-extra-light: #f3f4f6;
+  --el-border-color-hover: #d1d5db;
+
+  --el-bg-color: #ffffff;
+  --el-bg-color-page: #f8fafc;
+  --el-bg-color-overlay: #ffffff;
+  --el-fill-color-blank: #ffffff;
+  --el-fill-color: #f3f4f6;
+  --el-fill-color-light: #f9fafb;
+  --el-fill-color-lighter: #fafafa;
+  --el-fill-color-extra-light: #fbfcfd;
+
+  --el-box-shadow: var(--fth-shadow-md);
+  --el-box-shadow-light: var(--fth-shadow);
+  --el-box-shadow-lighter: var(--fth-shadow-sm);
+
+  --el-font-size-base: 14px;
+  --el-font-size-small: 12px;
+  --el-font-size-large: 16px;
+  --el-font-family: var(--fth-font);
+  --el-font-weight-primary: 500;
+}

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.local
+.env
+.env.*
+!.env.development
+!.env.production
+
+# 本地截图诊断产物（puppeteer 生成）
+scripts/.snapshots/
+
+# Vite 缓存
+.vite/
