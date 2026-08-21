@@ -1,0 +1,27 @@
+# Java / Maven build output
+server/target/
+*.class
+
+# 文件上传目录（头像/图片，运行时生成）
+server/uploads/
+uploads/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.reasonix/
+
+# Claude Code (local machine settings)
+.claude/settings.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+dist/
+
+# logs
+*.log
