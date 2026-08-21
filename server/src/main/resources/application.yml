@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: fitness-server
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  global-config:
+    banner: false
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# JWT 配置
+# 安全约定：生产环境必须通过环境变量注入 JWT_SECRET（否则启动即失败），
+# 本地开发使用 application-dev.yml 中的显式开发密钥，绝不使用可推演的默认值。
+jwt:
+  secret: ${JWT_SECRET:}
+  access-token-expire-seconds: 7200      # access token 2 小时
+  refresh-token-expire-seconds: 604800   # refresh token 7 天
+
+# 应用自定义配置
+fitness:
+  file:
+    upload-dir: ./uploads                 # 本地文件上传目录（头像/图片）
+
+# AI 能力（智谱 GLM，OpenAI 兼容协议；免费 API Key 内置为默认值，可用环境变量 GLM_API_KEY 覆盖）
+ai:
+  provider: glm
+  base-url: https://open.bigmodel.cn/api/paas/v4
+  api-key: ${GLM_API_KEY:2b1b45ce5def4f929806ea94aaa0a7a1.rPUab1hSfMEalKe5}
+  model: glm-4.7-flash
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
